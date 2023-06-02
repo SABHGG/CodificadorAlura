@@ -35,6 +35,7 @@ function encriptar() {
       textoEncriptado += letra;
     }
   }
+  buttonCopiar.innerHTML = "Copiar";
   mostrarResultado(textoEncriptado);
 }
 
@@ -61,20 +62,17 @@ function desencriptar() {
       i++;
     }
   }
+  buttonCopiar.innerHTML = "Copiar";
   mostrarResultado(textoDesencriptado);
 }
 
 function mostrarResultado(texto) {
-  document.getElementById("img-man").style.display = "none";
-  document.getElementById("msg-no").style.display = "none";
-  textoResultado.className = "texto-resultado-on";
-  buttonCopiar.className = "button-copiar-on";
   mostrarTexto = document.getElementById("texto-resultado");
   mostrarTexto.innerHTML = texto;
 }
 
 function copiar() {
   let copyText = document.getElementById("texto-resultado");
-  copyText.select();
-  document.execCommand("copy");
+  navigator.clipboard.writeText(copyText.innerHTML);
+  buttonCopiar.innerHTML = "Copiado ✔";
 }

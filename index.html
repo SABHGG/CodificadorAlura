@@ -16,41 +16,43 @@
   <body>
     <header id="header">
       <img src="./assets/Vector.svg" id="img-logo" alt="logo" />
+      <h1>Codificador Alura</h1>
     </header>
 
     <main>
       <section class="contenedor">
-        <div>
-          <h1>Codificador Alura</h1>
+        <div class="mensaje">
+          <textarea
+            class="texto"
+            id="texto"
+            placeholder="Ingrese el texto que desees encriptar o desencriptar"
+          ></textarea>
           <p>
-            Este es un codificador de mensajes, que te permite encriptar y
-            desencriptar mensajes, para que puedas enviar mensajes secretos a
-            tus amigos.
+            <img src="assets/VectorAlert.svg" /> letras minúsculas y sin acentos
           </p>
+          <div class="buttons">
+            <button class="button-encriptar" id="button-encriptar">
+              encriptar
+            </button>
+            <button class="button-desencriptar" id="button-desencriptar">
+              desencriptar
+            </button>
+          </div>
         </div>
-        <textarea
-          class="texto"
-          id="texto"
-          placeholder="Ingrese el texto que desees encriptar o desencriptar"
-        ></textarea>
-        <p><img src="assets/VectorAlert.svg"/> letras minúsculas y sin acentos</p>
-        <div class="buttons">
-          <button class="button-encriptar" id="button-encriptar">
-            encriptar
-          </button>
-          <button class="button-desencriptar" id="button-desencriptar">
-            desencriptar
-          </button>
-        </div>
-      </section>
 
-      <section class="resultado">
-        </div>
-        <textarea id="texto-resultado" class="texto-resultado-off"></textarea>
-        <div class="button-copiar-off">
-          <button id="button-copiar" class="button-copiar-off">copiar</button>
-        </div>
+        <section class="resultado">
+          <p id="texto-resultado" class="texto-resultado"></p>
+          <div class="">
+            <button id="button-copiar" class="button-copiar">copiar</button>
+          </div>
+        </section>
       </section>
+      <footer>
+        <p>
+          <a href="https://github.com/SABHGG"
+           >Desarrollado por Sergio Beleño</a>
+        </p>
+      </footer>
     </main>
     <script src="Index.js"></script>
   </body>
